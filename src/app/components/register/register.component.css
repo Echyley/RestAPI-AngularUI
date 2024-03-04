@@ -1,0 +1,56 @@
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -70%);
+  width: 50vh;
+}
+
+form h1 {
+  background-image: linear-gradient(45deg, #b77350, #f0ac8b);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-align: center;
+  margin-bottom: 1em;
+  padding: 10px;
+  font-size: 40px;
+  font-weight: 500;
+}
+
+label {
+  margin: 0;
+}
+
+label,
+p {
+  margin-bottom: 5px;
+  margin-top: 5px;
+  font-size: large;
+  color: white;
+}
+
+input {
+  background-color: rgba(255, 255, 255, 0.783);
+}
+
+button {
+  font-size: larger;
+  color: black;
+  margin-left: 11em;
+  margin-top: 3em;
+  background-color: #b77350;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  transition: transform 0.2s;
+
+  &:hover {
+    background-color: #ac5021;
+    color: white;
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  }
+}

@@ -1,0 +1,42 @@
+<div class="search-bar">
+  <form class="Hotbg">
+    <input type="text" name="" class="Hotbg-txt" formControlName="search" placeholder="Search book" autocomplete="off" />
+    <button class="Hotbg-btn">
+      <img src="../../../assets/img/icons8-pesquisar-50.png" alt="">
+      <a href="#"><i class="fa fa-search"></i></a>
+    </button>
+  </form>
+</div>
+
+<div class="content">
+  <div class="noBooks" *ngIf="books.length === 0">
+    <h1>No books yet :(</h1>
+    <p>Try to register a book!</p>
+  </div>
+
+  <div class="slider-wrapper" *ngIf="books.length > 0">
+    <button data-btn='previos'><</button>
+    <div class="slider">
+
+      <div class="book-card" *ngFor="let book of books">
+        <div class="card-content">
+          <h5 class="book-title">{{ book.title }}</h5>
+          <p class="book-genre">{{ book.genre }}</p>
+          <p class="book-genre">{{ book.size }}</p>
+          <button (click)="openEditModal(book)" class="edit-button">Edit</button>
+          <app-modal-update *ngIf="book.showEditModal"></app-modal-update>
+          <button (click)="deleteBook(book.id)" class="delete-button">Delete</button>
+        </div>
+      </div>
+      
+    </div>
+    <button data-btn='next'>></button>
+  </div>
+    
+  <ng-template #notFound>
+    <div class="notFoundSearch">
+      Not Found!
+    </div>
+  </ng-template>
+  
+</div>

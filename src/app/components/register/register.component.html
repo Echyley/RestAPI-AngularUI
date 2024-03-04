@@ -1,0 +1,18 @@
+<div class="content">
+    <form (submit)="createBook($event)">
+      <div class="crudForm">
+        <h1>Register</h1>
+        <label for="inputTitle" class="form-label"><p>Title</p></label>
+        <input type="text" class="form-control" id="inputTitle" name="title" autocomplete="off"/>
+  
+        <label for="inputGenre" class="form-label"><p>Genre</p></label>
+        <input type="text" class="form-control" id="inputGenre" name="genre" autocomplete="off"/>
+  
+        <label for="inputSize" class="form-label"><p>Size</p></label>
+        <input type="text" class="form-control" id="inputSize" name="size" placeholder="Small, Medium or Large." autocomplete="off"/>
+  
+        <button type="submit">Register</button>
+      </div>
+    </form>
+  </div>
+  
